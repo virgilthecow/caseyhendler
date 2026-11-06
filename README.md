@@ -8,3 +8,4 @@ Cloudflare Workers (static assets): `wrangler.jsonc` serves `site/`. Deploy comm
 - Samurai movie: set `MOVIE_ID` (YouTube video id) near the bottom of `site/index.html`.
 - Rickroll: "TOP SECRET blooper reel" button and the webring "Random" link.
 - Easter eggs: Konami code, or click the spinning face 5 times.
+- Webmaster: anonymous. Obviously.
