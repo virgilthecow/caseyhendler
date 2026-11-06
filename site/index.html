@@ -95,15 +95,14 @@
   .gallery { display:flex; align-items:center; justify-content:center; gap:18px; flex-wrap:wrap; margin-top:12px; }
   .gallery figure { margin:0; }
   .hero { flex:0 0 auto; }
-  .relic { width:170px; color:#fff; font-size:.85rem; line-height:1.35; }
-  .relic .frame { border:10px ridge gold; background:radial-gradient(#fff8dc, #e6c88a); box-shadow:0 0 18px #ff0; padding:6px; }
-  .relic .art { height:140px; display:grid; place-items:center; font-size:5rem; position:relative; }
+  .relic { width:200px; color:#fff; font-size:.85rem; line-height:1.35; }
+  .relic .frame { border:10px ridge gold; background:#fff; box-shadow:0 0 18px #ff0; padding:4px; }
+  .relic img.flex { display:block; width:100%; height:auto; }
+  .relic img.mirror { transform:scaleX(-1); }
   .relic.left { transform:rotate(-4deg); animation:wobL 2.4s ease-in-out infinite; }
   .relic.right { transform:rotate(4deg); animation:wobR 2.4s ease-in-out infinite; }
   @keyframes wobL { 50% { transform:rotate(3deg) translateY(-4px); } }
   @keyframes wobR { 50% { transform:rotate(-3deg) translateY(-4px); } }
-  .rock .eyes { position:absolute; font-size:1.7rem; top:52px; }
-  .trophy .pin { position:absolute; font-size:2rem; bottom:8px; right:18px; animation:spin 3s linear infinite; }
   .relic figcaption { margin-top:8px; font-style:italic; color:#ffccff; }
   @media (max-width:640px) { .hero { order:-1; width:100%; } .relic { width:150px; } }
   .caption { font-size: .85rem; color: #ccc; font-style: italic; }
@@ -215,16 +214,16 @@
 
   <div class="gallery">
     <figure class="relic left">
-      <div class="frame"><div class="art rock">🪨<span class="eyes">👀</span></div></div>
-      <figcaption>Casey's Pet Rock, "Gary"<br>(1998–present)<br>Has never once run away.</figcaption>
+      <div class="frame"><img class="flex" src="flex.webp" alt="Casey, flexing" width="480" height="600"></div>
+      <figcaption>Casey before his morning workout</figcaption>
     </figure>
     <figure class="hero">
       <div class="portrait" title="artist's rendering">😎</div>
       <figcaption class="caption">Actual photograph of Casey (artist's rendering) (artist was 6)</figcaption>
     </figure>
     <figure class="relic right">
-      <div class="frame"><div class="art trophy">🏆<span class="pin">🎳</span></div></div>
-      <figcaption>Casey's Bowling Trophy<br>2nd Place, Tuesday League<br>(there were 2 teams)</figcaption>
+      <div class="frame"><img class="flex mirror" src="flex.webp" alt="Casey, flexing the other way" width="480" height="600"></div>
+      <figcaption>Casey after his morning workout<br>(he looked the other way)</figcaption>
     </figure>
   </div>
 
