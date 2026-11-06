@@ -1,0 +1,493 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Casey Hendler Fan Club</title>
+<meta name="description" content="The Official Unofficial Casey Hendler Fan Club. Est. 1998. Best viewed in Netscape Navigator.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⭐</text></svg>">
+<style>
+  :root {
+    --bg: #000033;
+    --ink: #ffff66;
+    --link: #00ffff;
+    --hot: #ff00ff;
+    --panel: #000080;
+    --border: #c0c0c0;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; }
+  body {
+    background-color: var(--bg);
+    background-image:
+      radial-gradient(1px 1px at 20px 30px, #fff, transparent),
+      radial-gradient(1px 1px at 80px 120px, #fff, transparent),
+      radial-gradient(2px 2px at 150px 60px, #ffd, transparent),
+      radial-gradient(1px 1px at 200px 180px, #fff, transparent),
+      radial-gradient(1px 1px at 120px 210px, #aaf, transparent),
+      radial-gradient(2px 2px at 40px 170px, #fff, transparent);
+    background-size: 240px 240px;
+    color: var(--ink);
+    font-family: "Comic Sans MS", "Comic Sans", "Chalkboard SE", "Comic Neue", cursive;
+    cursor: crosshair;
+    overflow-x: hidden;
+  }
+  a { color: var(--link); }
+  a:visited { color: #ff99ff; }
+  .wrap { max-width: 820px; margin: 0 auto; padding: 12px 16px 60px; text-align: center; }
+
+  .ticker {
+    background: #c0c0c0; color: #000; font-family: "Times New Roman", serif;
+    border: 2px outset #fff; padding: 4px 0; overflow: hidden; white-space: nowrap;
+    font-weight: bold;
+  }
+  .ticker span { display: inline-block; padding-left: 100%; animation: scroll 22s linear infinite; }
+  @keyframes scroll { to { transform: translateX(-100%); } }
+
+  h1 {
+    font-family: Impact, "Arial Black", sans-serif;
+    font-size: clamp(2.2rem, 9vw, 4.6rem);
+    margin: 20px 0 4px; line-height: 1;
+    letter-spacing: 2px;
+    background: linear-gradient(90deg, red, orange, yellow, lime, cyan, blue, magenta, red);
+    background-size: 200% auto;
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+    animation: rainbow 3s linear infinite;
+    filter: drop-shadow(3px 3px 0 #000) drop-shadow(0 0 8px #f0f);
+  }
+  @keyframes rainbow { to { background-position: 200% center; } }
+  .sub { font-size: 1.15rem; color: #fff; }
+  .blink { animation: blink 1s steps(1) infinite; }
+  @keyframes blink { 50% { visibility: hidden; } }
+
+  .flame {
+    height: 22px; margin: 22px auto; max-width: 100%;
+    background:
+      repeating-linear-gradient(90deg, transparent 0 6px, #000033 6px 8px),
+      linear-gradient(0deg, #ff3300, #ff9900 45%, #ffff00 80%, transparent);
+    -webkit-mask: repeating-radial-gradient(circle at 50% 120%, #000 0 8px, transparent 8px 9px);
+    animation: flick .35s infinite alternate;
+    border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+  }
+  @keyframes flick { to { transform: scaleY(1.25) translateY(-2px); filter: hue-rotate(15deg); } }
+
+  .construction {
+    display: inline-flex; align-items: center; gap: 10px;
+    background: repeating-linear-gradient(45deg, #ffcc00 0 14px, #000 14px 28px);
+    padding: 6px; margin: 6px 0;
+  }
+  .construction b {
+    background: #ffcc00; color: #000; padding: 6px 12px; font-family: Arial, sans-serif;
+    border: 2px solid #000;
+  }
+  .digger { display: inline-block; animation: dig .6s infinite alternate; font-size: 1.6rem; }
+  @keyframes dig { to { transform: rotate(-18deg) translateY(-3px); } }
+
+  .portrait {
+    width: 220px; height: 220px; margin: 18px auto 6px; border-radius: 50%;
+    border: 6px ridge gold; position: relative;
+    background: radial-gradient(circle at 50% 40%, #ffeedd, #ffcc99 60%, #cc8855);
+    box-shadow: 0 0 30px #ff0, 0 0 60px #f0f;
+    animation: spin 8s linear infinite;
+    display: grid; place-items: center; font-size: 6.2rem;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  .caption { font-size: .85rem; color: #ccc; font-style: italic; }
+
+  .panel {
+    background: var(--panel); border: 4px ridge var(--border);
+    margin: 22px 0; padding: 14px 16px; text-align: left;
+  }
+  .panel h2 {
+    margin: 0 0 10px; text-align: center; color: var(--hot);
+    font-family: "Times New Roman", serif; font-size: 1.6rem;
+    text-shadow: 2px 2px #000;
+  }
+  .fact { min-height: 4.2em; font-size: 1.2rem; color: #fff; text-align: center; display: grid; place-items: center; }
+  .btn {
+    font-family: inherit; font-size: 1.05rem; cursor: pointer;
+    background: #c0c0c0; color: #000; border: 3px outset #fff; padding: 8px 16px; margin: 6px 4px;
+  }
+  .btn:active { border-style: inset; }
+  .btn.big { font-size: 1.4rem; background: lime; animation: pulse 1.2s infinite; }
+  @keyframes pulse { 50% { transform: scale(1.06); box-shadow: 0 0 18px lime; } }
+  .center { text-align: center; }
+
+  table.awards { width: 100%; border-collapse: separate; border-spacing: 8px; }
+  table.awards td {
+    background: linear-gradient(#ffd700, #b8860b); color: #000; text-align: center;
+    border: 3px outset #ffe680; padding: 8px 4px; font-family: "Times New Roman", serif;
+    font-weight: bold; font-size: .9rem; width: 33%;
+  }
+  table.awards td .medal { font-size: 1.8rem; display: block; }
+
+  ul.top10 { margin: 0; padding-left: 1.4em; color: #fff; line-height: 1.6; }
+  ul.top10 li::marker { content: "👉 "; }
+
+  .counter { display: inline-flex; gap: 2px; margin: 6px 0; }
+  .counter span {
+    background: #000; color: #0f0; font-family: "Courier New", monospace; font-size: 1.5rem;
+    padding: 2px 6px; border: 1px solid #333; text-shadow: 0 0 6px #0f0;
+  }
+
+  .gb-entry { border-bottom: 1px dashed #66f; padding: 8px 0; color: #fff; }
+  .gb-entry .who { color: var(--ink); font-weight: bold; }
+  .gb-entry .when { color: #99f; font-size: .8rem; }
+  .gb-form { display: grid; gap: 6px; margin-top: 12px; }
+  .gb-form input, .gb-form textarea {
+    font-family: "Courier New", monospace; font-size: 1rem; padding: 6px;
+    background: #fff; color: #000; border: 2px inset #ccc; width: 100%;
+  }
+
+  .webring {
+    border: 3px double #0ff; padding: 10px; margin: 22px auto; max-width: 520px; color: #fff;
+  }
+  .footer { font-size: .85rem; color: #aaa; margin-top: 30px; line-height: 1.6; }
+  .badges { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center; margin: 12px 0; }
+  .badge88 {
+    width: 88px; height: 31px; font: bold 9px/1.1 Verdana, sans-serif; display: grid; place-items: center;
+    border: 1px solid #fff; color: #fff; text-align: center; padding: 1px;
+  }
+
+  .spark {
+    position: fixed; pointer-events: none; z-index: 50; font-size: 14px;
+    animation: fall 900ms ease-out forwards;
+  }
+  @keyframes fall { to { transform: translateY(40px) scale(.2) rotate(180deg); opacity: 0; } }
+
+  #hf {
+    position: fixed; inset: 0; display: none; place-items: center; z-index: 60;
+    background: rgba(0,0,0,.6);
+  }
+  #hf.show { display: grid; }
+  #hf .win {
+    background: #c0c0c0; color: #000; border: 3px outset #fff; width: min(360px, 92vw);
+    font-family: Tahoma, Arial, sans-serif; text-align: left;
+  }
+  #hf .bar { background: linear-gradient(90deg, #000080, #1084d0); color: #fff; padding: 4px 8px; font-weight: bold; display: flex; justify-content: space-between; }
+  #hf .body { padding: 18px; text-align: center; }
+  #hf .hand { font-size: 5rem; display: inline-block; animation: slap .5s ease-in-out 3; }
+  @keyframes slap { 50% { transform: rotate(-30deg) scale(1.2); } }
+
+  .rain { position: fixed; top: -40px; z-index: 55; pointer-events: none; font-family: Impact, sans-serif; color: gold; animation: drop linear forwards; text-shadow: 2px 2px #f0f; }
+  @keyframes drop { to { transform: translateY(110vh) rotate(720deg); } }
+
+  .theater { background:#000; border:8px ridge #8b0000; padding:10px; margin:10px auto; max-width:640px; box-shadow:0 0 0 4px gold, 0 0 30px #f00; }
+  .theater .screen { position:relative; aspect-ratio:16/9; background:#111; display:grid; place-items:center; color:#888; }
+  .theater iframe { position:absolute; inset:0; width:100%; height:100%; border:0; }
+  .theater .marq { color:gold; font-family:Impact, sans-serif; letter-spacing:3px; font-size:1.3rem; margin-bottom:6px; text-align:center; }
+  .secret { background:#ff0; color:#f00; font-weight:bold; }
+  #rr { position:fixed; inset:0; display:none; place-items:center; z-index:70; background:rgba(0,0,0,.8); }
+  #rr.show { display:grid; }
+  #rr .win { width:min(640px,94vw); background:#c0c0c0; border:3px outset #fff; font-family:Tahoma, Arial, sans-serif; }
+  #rr .bar { background:linear-gradient(90deg,#800000,#d01010); color:#fff; padding:4px 8px; font-weight:bold; display:flex; justify-content:space-between; }
+  #rr .vid { position:relative; aspect-ratio:16/9; background:#000; }
+  #rr iframe { position:absolute; inset:0; width:100%; height:100%; border:0; }
+  #rr .got { text-align:center; padding:8px; color:#000; font-weight:bold; }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation-duration: 0s !important; animation-iteration-count: 1 !important; }
+  }
+</style>
+</head>
+<body>
+<div class="ticker"><span>★ WELCOME TO THE OFFICIAL UNOFFICIAL CASEY HENDLER FAN CLUB ★ MEMBERSHIP: FREE ★ DUES: ONE (1) HIGH FIVE PER YEAR ★ PLEASE SIGN THE GUESTBOOK ★ NO HOTLINKING CASEY ★</span></div>
+
+<div class="wrap">
+  <h1>CASEY HENDLER</h1>
+  <div class="sub">~*~ The Official Unofficial Fan Club ~*~ Est. 1998 ~*~</div>
+
+  <div class="construction"><b><span class="digger">🚧</span> UNDER CONSTRUCTION <span class="digger">👷</span></b></div>
+  <p class="blink" style="color:#f00;font-weight:bold;font-size:1.2rem">!!! NEW !!! NEW !!! NEW !!!</p>
+
+  <div class="portrait" title="artist's rendering">😎</div>
+  <div class="caption">Actual photograph of Casey (artist's rendering) (artist was 6)</div>
+
+  <div class="flame"></div>
+
+  <div class="panel">
+    <h2>✨ Casey Fact of the Moment ✨</h2>
+    <div class="fact" id="fact">Loading Casey fact... please wait... (56k modem detected)</div>
+    <div class="center"><button class="btn" id="nextFact">MORE CASEY FACTS!!!</button></div>
+  </div>
+
+  <div class="panel">
+    <h2>🎬 NOW SHOWING: CASEY, THE MOTION PICTURE 🎬</h2>
+    <div class="theater">
+      <div class="marq">⚔️ THE LEGEND OF SAMURAI CASEY ⚔️</div>
+      <div class="screen" id="movie">🎞️ Rewinding the VHS tape... (be kind, rewind)</div>
+    </div>
+    <p class="center" style="color:#fff">Critics are calling it "a film" and "definitely a movie."<br>⭐⭐⭐⭐⭐ — Casey's Mom, probably</p>
+  </div>
+
+  <div class="center">
+    <button class="btn secret" id="rrBtn">🔒 TOP SECRET: Never-before-seen Casey blooper reel 🔒</button>
+  </div>
+
+  <div class="panel">
+    <h2>🏆 Prestigious Awards 🏆</h2>
+    <table class="awards"><tr>
+      <td><span class="medal">🥇</span>Coolest Guy on the Information Superhighway 1998</td>
+      <td><span class="medal">🎖️</span>Most Firm Handshake, Tri-County Area</td>
+      <td><span class="medal">🏅</span>Honorary Member of the Pigeon Council</td>
+    </tr></table>
+  </div>
+
+  <div class="panel">
+    <h2>📜 Top 10 Reasons Casey Rules 📜</h2>
+    <ul class="top10">
+      <li>Once high-fived a cloud. The cloud is still talking about it.</li>
+      <li>Can parallel park a shopping cart on the first try.</li>
+      <li>Has never been defeated at rock-paper-scissors by a houseplant.</li>
+      <li>His sneezes have been described as "melodic."</li>
+      <li>Knows at least four (4) knots.</li>
+      <li>Microwave popcorn stops popping when Casey says so.</li>
+      <li>Was voted "Most Likely to Own a Domain Name" and look at him now.</li>
+      <li>Geese respect him. Not like him. Respect him.</li>
+      <li>Can say "aluminium" both ways.</li>
+      <li>Is, at this very moment, being a great guy somewhere.</li>
+    </ul>
+  </div>
+
+  <div class="center">
+    <button class="btn big" id="hfBtn">🖐️ CLICK HERE FOR A FREE VIRTUAL HIGH FIVE 🖐️</button><br>
+    <button class="btn" id="midiBtn">🎵 Play background MIDI</button>
+  </div>
+
+  <div class="flame"></div>
+
+  <div class="panel">
+    <h2>📖 Sign My Guestbook!!! 📖</h2>
+    <div id="gb"></div>
+    <form class="gb-form" id="gbForm">
+      <input id="gbName" maxlength="40" placeholder="Your Name (or screen name)" required>
+      <textarea id="gbMsg" maxlength="200" rows="3" placeholder="Leave a nice message for Casey :)" required></textarea>
+      <div class="center"><button class="btn" type="submit">✍️ Sign Guestbook</button></div>
+    </form>
+  </div>
+
+  <div class="webring">
+    🔗 This site is a proud member of the <b>Guys Named Casey Webring</b> 🔗<br>
+    <a href="#" class="ringlink">&lt;&lt; Prev</a> | <a href="#" class="ringlink">Random</a> | <a href="#" class="ringlink">Next &gt;&gt;</a>
+  </div>
+
+  <div>You are visitor number:</div>
+  <div class="counter" id="counter"></div>
+
+  <div class="badges">
+    <div class="badge88" style="background:#003">Best viewed in<br>NETSCAPE 4.0</div>
+    <div class="badge88" style="background:#600">800x600<br>RESOLUTION</div>
+    <div class="badge88" style="background:#060">100% CASEY<br>CERTIFIED</div>
+    <div class="badge88" style="background:#505">MADE WITH<br>NOTEPAD</div>
+  </div>
+
+  <div class="footer">
+    © 1998–2026 Casey Hendler Fan Club. All rights reserved. Some lefts also reserved.<br>
+    This site is a loving joke. Real Casey website coming soon. Probably.<br>
+    <span class="blink">📧</span> E-mail the webmaster: <a href="#" id="mailto">webmaster@caseyhendler.com</a>
+  </div>
+</div>
+
+<div id="hf" role="dialog" aria-modal="true">
+  <div class="win">
+    <div class="bar"><span>HighFive.exe</span><span style="cursor:pointer" id="hfX">✕</span></div>
+    <div class="body">
+      <div class="hand">🖐️</div>
+      <p><b>HIGH FIVE DELIVERED!</b></p>
+      <p id="hfCount"></p>
+      <button class="btn" id="hfOk">OK</button>
+    </div>
+  </div>
+</div>
+
+<div id="rr" role="dialog" aria-modal="true">
+  <div class="win">
+    <div class="bar"><span>BLOOPERS_FINAL_v2_REAL.avi</span><span style="cursor:pointer" id="rrX">✕</span></div>
+    <div class="vid" id="rrVid"></div>
+    <div class="got">Casey would never give you up. 🕺</div>
+  </div>
+</div>
+
+<script>
+(() => {
+  const store = {
+    get(k, d) { try { const v = localStorage.getItem(k); return v === null ? d : JSON.parse(v); } catch { return d; } },
+    set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch {} }
+  };
+
+  // Facts
+  const facts = [
+    "Casey can clap with one hand. It sounds like a tiny thunderstorm.",
+    "Scientists estimate Casey has blinked over 400 million times. Show-off.",
+    "Casey's favorite number is a secret, but it's rumored to be 'yes'.",
+    "Casey once looked at a sudoku and it solved itself out of respect.",
+    "If you say 'Casey Hendler' three times into a mirror, nothing happens. He's busy.",
+    "Casey has never once lost an argument with a vending machine.",
+    "Dolphins have a click for 'Casey'. It translates roughly to 'that guy rules'.",
+    "Casey's Wi-Fi password is just a really firm handshake.",
+    "When Casey enters a room, the room gets 3% more room.",
+    "Casey has read the terms and conditions. All of them. For fun.",
+    "The moon has asked Casey for advice on two separate occasions.",
+    "Casey's high fives are legally classified as a renewable resource.",
+    "Casey once ate a sandwich so well, the sandwich wrote a thank-you note.",
+    "Squirrels in a 5-mile radius are aware of Casey and approve.",
+    "Casey invented the word 'radical'. (Unverified.) (Very unverified.)"
+  ];
+  const factEl = document.getElementById('fact');
+  let order = facts.map((_, i) => i).sort(() => Math.random() - .5), fi = 0;
+  const nextFact = () => { factEl.textContent = facts[order[fi++ % order.length]]; };
+  setTimeout(nextFact, 1400);
+  document.getElementById('nextFact').onclick = nextFact;
+
+  // Visitor counter
+  let visits = store.get('chfc_visits', 1337000 + Math.floor(Math.random() * 9000));
+  visits += 1 + Math.floor(Math.random() * 3);
+  store.set('chfc_visits', visits);
+  document.getElementById('counter').innerHTML =
+    String(visits).padStart(8, '0').split('').map(d => `<span>${d}</span>`).join('');
+
+  // Sparkle cursor
+  const sparks = ['✨', '⭐', '💫', '🌟', '✦'];
+  let last = 0;
+  const sparkle = (x, y) => {
+    const s = document.createElement('div');
+    s.className = 'spark';
+    s.textContent = sparks[Math.floor(Math.random() * sparks.length)];
+    s.style.left = (x - 7) + 'px'; s.style.top = (y - 7) + 'px';
+    s.style.color = `hsl(${Math.random() * 360},100%,70%)`;
+    document.body.appendChild(s);
+    setTimeout(() => s.remove(), 950);
+  };
+  addEventListener('pointermove', e => {
+    const now = performance.now();
+    if (now - last > 35) { last = now; sparkle(e.clientX, e.clientY); }
+  });
+
+  // High five
+  const hf = document.getElementById('hf');
+  const closeHf = () => hf.classList.remove('show');
+  document.getElementById('hfBtn').onclick = () => {
+    const n = store.get('chfc_hf', 0) + 1; store.set('chfc_hf', n);
+    document.getElementById('hfCount').textContent =
+      n === 1 ? "That's your first high five from Casey. Treasure it." :
+      `You have received ${n} high fives. Casey's palm is getting tired but he'll never quit.`;
+    hf.classList.add('show');
+    blip(880, .08); setTimeout(() => blip(1320, .12), 90);
+  };
+  document.getElementById('hfOk').onclick = closeHf;
+  document.getElementById('hfX').onclick = closeHf;
+  hf.addEventListener('click', e => { if (e.target === hf) closeHf(); });
+
+  // Guestbook (stored in this browser only)
+  const seed = [
+    { who: "The Moon", when: "03/14/1999", msg: "big fan. tell casey to look up sometime. i'm the round one." },
+    { who: "xX_Raccoon_Xx", when: "07/04/2001", msg: "casey left a perfectly good trash can alone once. respect." },
+    { who: "Grandma's Toaster", when: "11/22/2003", msg: "*ding*" },
+    { who: "A Goose", when: "05/09/2010", msg: "HONK (complimentary)" },
+    { who: "Clay", when: "11/06/2026", msg: "bought u a domain. ur welcome. 😎" }
+  ];
+  const gbEl = document.getElementById('gb');
+  const esc = s => s.replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+  const renderGb = () => {
+    const mine = store.get('chfc_gb', []);
+    gbEl.innerHTML = [...mine.slice().reverse(), ...seed.slice().reverse()].map(e =>
+      `<div class="gb-entry"><span class="who">${esc(e.who)}</span> <span class="when">wrote on ${esc(e.when)}:</span><br>${esc(e.msg)}</div>`
+    ).join('');
+  };
+  renderGb();
+  document.getElementById('gbForm').onsubmit = e => {
+    e.preventDefault();
+    const who = document.getElementById('gbName').value.trim();
+    const msg = document.getElementById('gbMsg').value.trim();
+    if (!who || !msg) return;
+    const d = new Date();
+    const when = `${String(d.getMonth() + 1).padStart(2, '0')}/${String(d.getDate()).padStart(2, '0')}/${d.getFullYear()}`;
+    const mine = store.get('chfc_gb', []); mine.push({ who, msg, when }); store.set('chfc_gb', mine.slice(-20));
+    e.target.reset(); renderGb();
+    alert('Thank you for signing the guestbook!!! Casey will read it personally*\n\n*not guaranteed');
+  };
+
+  // ===== Samurai movie: put the YouTube video id here =====
+  const MOVIE_ID = 'G4jOBAjIVa0';
+  const movieEl = document.getElementById('movie');
+  if (MOVIE_ID) movieEl.innerHTML = `<iframe src="https://www.youtube-nocookie.com/embed/${MOVIE_ID}?rel=0" title="The Legend of Samurai Casey" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`;
+
+  // Rickroll
+  const rr = document.getElementById('rr'), rrVid = document.getElementById('rrVid');
+  const rickroll = () => {
+    if (playing) midiBtn.click();
+    rrVid.innerHTML = '<iframe src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?autoplay=1&rel=0" title="Blooper reel" allow="autoplay; encrypted-media; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>';
+    rr.classList.add('show');
+  };
+  const closeRr = () => { rr.classList.remove('show'); rrVid.innerHTML = ''; };
+  document.getElementById('rrBtn').onclick = rickroll;
+  document.getElementById('rrX').onclick = closeRr;
+  rr.addEventListener('click', e => { if (e.target === rr) closeRr(); });
+
+  // Webring + mailto gags
+  const ringMsgs = [
+    "ERROR 404: The other Caseys could not handle the competition.",
+    "This webring has 1 member. It is Casey.",
+    "Redirecting you to... this exact page. Enjoy!"
+  ];
+  document.querySelectorAll('.ringlink').forEach((a, i) => a.onclick = ev => { ev.preventDefault(); if (i === 1) rickroll(); else alert(ringMsgs[i]); });
+  document.getElementById('mailto').onclick = ev => { ev.preventDefault(); alert("The webmaster's inbox is full of fan mail. Please try again in 1998."); };
+
+  // Tiny chiptune "MIDI"
+  let ac, playing = false, timer;
+  const audio = () => (ac ||= new (window.AudioContext || window.webkitAudioContext)());
+  function blip(freq, dur, type = 'square', when = 0) {
+    try {
+      const c = audio(), o = c.createOscillator(), g = c.createGain();
+      o.type = type; o.frequency.value = freq;
+      const t = c.currentTime + when;
+      g.gain.setValueAtTime(.06, t); g.gain.exponentialRampToValueAtTime(.0001, t + dur);
+      o.connect(g).connect(c.destination); o.start(t); o.stop(t + dur + .02);
+    } catch {}
+  }
+  const N = { C4: 262, D4: 294, E4: 330, F4: 349, G4: 392, A4: 440, B4: 494, C5: 523, D5: 587, E5: 659, G5: 784 };
+  const song = ['C5','E5','G5','E5','D5','C5','A4','G4','A4','C5','D5','E5','D5','C5','G4','-',
+                'C5','E5','G5','E5','D5','C5','A4','G4','A4','G4','E4','D4','C4','-','C4','-'];
+  const bass = ['C4','C4','A4','A4','F4','F4','G4','G4'];
+  const midiBtn = document.getElementById('midiBtn');
+  midiBtn.onclick = () => {
+    playing = !playing;
+    midiBtn.textContent = playing ? '🔇 Stop background MIDI' : '🎵 Play background MIDI';
+    if (!playing) { clearInterval(timer); return; }
+    audio().resume();
+    let step = 0;
+    const tick = () => {
+      const n = song[step % song.length];
+      if (n !== '-') blip(N[n], .17);
+      if (step % 4 === 0) blip(N[bass[(step / 4) % bass.length]] / 2, .32, 'triangle');
+      step++;
+    };
+    tick(); timer = setInterval(tick, 180);
+  };
+
+  // Konami code: it rains Caseys
+  const code = ['ArrowUp','ArrowUp','ArrowDown','ArrowDown','ArrowLeft','ArrowRight','ArrowLeft','ArrowRight','b','a'];
+  let ki = 0;
+  addEventListener('keydown', e => {
+    ki = (e.key === code[ki]) ? ki + 1 : (e.key === code[0] ? 1 : 0);
+    if (ki === code.length) { ki = 0; rainCaseys(); }
+  });
+  // Also: clicking the portrait 5 times
+  let pc = 0;
+  document.querySelector('.portrait').onclick = () => { if (++pc % 5 === 0) rainCaseys(); else blip(600 + pc * 80, .08); };
+  function rainCaseys() {
+    for (let i = 0; i < 60; i++) {
+      const r = document.createElement('div');
+      r.className = 'rain';
+      r.textContent = Math.random() < .5 ? 'CASEY' : '😎';
+      r.style.left = Math.random() * 100 + 'vw';
+      r.style.fontSize = (14 + Math.random() * 30) + 'px';
+      r.style.animationDuration = (2 + Math.random() * 3) + 's';
+      r.style.animationDelay = (Math.random() * 1.5) + 's';
+      document.body.appendChild(r);
+      setTimeout(() => r.remove(), 7000);
+    }
+  }
+})();
+</script>
+</body>
+</html>
