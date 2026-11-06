@@ -92,10 +92,11 @@
     display: grid; place-items: center; font-size: 6.2rem;
   }
   @keyframes spin { to { transform: rotate(360deg); } }
-  .gallery { display:flex; align-items:center; justify-content:center; gap:18px; flex-wrap:wrap; margin-top:12px; }
+  .gallery { display:flex; align-items:center; justify-content:center; gap:18px; flex-wrap:nowrap; margin-top:12px; }
   .gallery figure { margin:0; }
-  .hero { flex:0 0 auto; }
-  .relic { width:200px; color:#fff; font-size:.85rem; line-height:1.35; }
+  .hero { flex:0 0 auto; max-width:260px; }
+  .hero .caption { display:block; margin-top:6px; }
+  .relic { flex:0 1 200px; min-width:0; color:#fff; font-size:.85rem; line-height:1.35; }
   .relic .frame { border:10px ridge gold; background:#fff; box-shadow:0 0 18px #ff0; padding:4px; }
   .relic img.flex { display:block; width:100%; height:auto; }
   .relic img.mirror { transform:scaleX(-1); }
@@ -104,7 +105,7 @@
   @keyframes wobL { 50% { transform:rotate(3deg) translateY(-4px); } }
   @keyframes wobR { 50% { transform:rotate(-3deg) translateY(-4px); } }
   .relic figcaption { margin-top:8px; font-style:italic; color:#ffccff; }
-  @media (max-width:640px) { .hero { order:-1; width:100%; } .relic { width:150px; } }
+  @media (max-width:640px) { .gallery { flex-wrap:wrap; } .hero { order:-1; width:100%; max-width:none; } .relic { flex:0 1 150px; } }
   .caption { font-size: .85rem; color: #ccc; font-style: italic; }
 
   .panel {
@@ -126,7 +127,8 @@
   @keyframes pulse { 50% { transform: scale(1.06); box-shadow: 0 0 18px lime; } }
   .center { text-align: center; }
 
-  table.awards { width: 100%; border-collapse: separate; border-spacing: 8px; }
+  table.awards { width: 100%; border-collapse: separate; border-spacing: 8px; table-layout: fixed; }
+  @media (max-width:640px) { table.awards { border-spacing: 4px; } table.awards td { font-size: .75rem; overflow-wrap: anywhere; hyphens: auto; } }
   table.awards td {
     background: linear-gradient(#ffd700, #b8860b); color: #000; text-align: center;
     border: 3px outset #ffe680; padding: 8px 4px; font-family: "Times New Roman", serif;
